@@ -12,7 +12,6 @@ type Logger struct {
 
 // Config contains logger configuration options.
 type Config struct {
-
 	// Output destination for log messages.
 	Out io.Writer
 

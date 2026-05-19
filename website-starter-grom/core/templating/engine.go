@@ -131,7 +131,6 @@ func (engine *Engine) Render(
 	name string,
 	data any,
 ) error {
-
 	// Lock cache for reading.
 	engine.mutex.RLock()
 

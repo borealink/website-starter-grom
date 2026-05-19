@@ -37,7 +37,6 @@ func NewServer(
 // Start launches the HTTP server in a separate goroutine.
 func (server *Server) Start() {
 	go func() {
-
 		// Log server startup message.
 		server.logger.Get().Println(
 			"Server running on",
@@ -63,7 +62,6 @@ func (server *Server) Start() {
 func (server *Server) Shutdown(
 	ctx context.Context,
 ) error {
-
 	// Log shutdown start.
 	server.logger.Get().Println(
 		"Shutting down server...",
@@ -91,7 +89,6 @@ func (server *Server) Shutdown(
 func (server *Server) WaitForShutdown(
 	timeout time.Duration,
 ) {
-
 	// Create signal channel.
 	stop := make(
 		chan os.Signal,

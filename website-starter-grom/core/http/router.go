@@ -30,7 +30,6 @@ func (router *Router) RegisterRoutes(
 	routes []Route,
 ) {
 	for _, route := range routes {
-
 		// Create local copies to avoid closure issues.
 		path := route.Path
 		method := route.Method
@@ -43,10 +42,8 @@ func (router *Router) RegisterRoutes(
 				w http.ResponseWriter,
 				req *http.Request,
 			) {
-
 				// Ensure the requested path matches exactly.
 				if req.URL.Path != path {
-
 					// Use custom not found handler if available.
 					if router.notFound != nil {
 						router.notFound(
@@ -54,7 +51,6 @@ func (router *Router) RegisterRoutes(
 							req,
 						)
 					} else {
-
 						// Fallback to default 404 response.
 						http.NotFound(
 							w,
@@ -89,7 +85,6 @@ func (router *Router) RegisterStatic(
 	path,
 	dir string,
 ) {
-
 	// Create a file server for the static directory.
 	fs := http.FileServer(
 		http.Dir(

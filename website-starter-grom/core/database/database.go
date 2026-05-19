@@ -14,7 +14,6 @@ type Database struct {
 func NewDatabase(
 	path string,
 ) (*Database, error) {
-
 	// Open the SQLite database using GORM.
 	db, err := gorm.Open(
 		sqlite.Open(path),
