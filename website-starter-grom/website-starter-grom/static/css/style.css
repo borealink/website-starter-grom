@@ -1,0 +1,362 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f10;
+    color: #e5e5e5;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background: #151515;
+    padding: 14px 24px;
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    border-bottom: 1px solid #222;
+}
+
+.navbar a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.8;
+
+    transition: opacity 0.2s ease, color 0.2s ease;
+}
+
+.navbar a:hover {
+    opacity: 1;
+    color: #22c55e;
+}
+
+.container {
+    flex: 1;
+
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 48px 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.footer {
+    margin-top: auto;
+
+    padding: 16px 24px;
+    background: #151515;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 13px;
+    opacity: 0.7;
+
+    border-top: 1px solid #222;
+}
+
+.error {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.code {
+    font-size: 120px;
+    font-weight: 800;
+    color: #22c55e;
+    letter-spacing: -4px;
+    margin-bottom: 10px;
+}
+
+.error h1 {
+    font-size: 34px;
+    margin: 0;
+}
+
+.error p {
+    margin-top: 12px;
+    max-width: 420px;
+    opacity: 0.6;
+    line-height: 1.6;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button {
+    background: #1f1f1f;
+    color: #e5e5e5;
+
+    border: 1px solid #2a2a2a;
+
+    margin-top: 16px;
+    padding: 12px 22px;
+
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    transition: all 0.2s ease;
+}
+
+.button:hover {
+    background: #22c55e;
+    color: #0f0f10;
+    border-color: #22c55e;
+}
+
+.actions {
+    margin-top: 25px;
+    display: flex;
+    gap: 12px;
+}
+
+.notes-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 34px;
+}
+
+.page-header p {
+    margin-top: 8px;
+    opacity: 0.6;
+}
+
+.card {
+    background: #151515;
+    border: 1px solid #222;
+
+    border-radius: 14px;
+
+    padding: 24px;
+}
+
+.note-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+.form-group input,
+.form-group textarea {
+    background: #0f0f10;
+    border: 1px solid #2a2a2a;
+
+    color: #e5e5e5;
+
+    border-radius: 10px;
+
+    padding: 14px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #22c55e;
+
+    box-shadow:
+    0 0 0 3px rgba(34, 197, 94, 0.15);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+.table-header h2 {
+    margin: 0;
+}
+
+.table-header span {
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.notes-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.notes-table thead {
+    background: #1b1b1c;
+}
+
+.notes-table th {
+    text-align: left;
+
+    padding: 14px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #22c55e;
+
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.notes-table td {
+    padding: 14px;
+
+    border-bottom: 1px solid #222;
+
+    vertical-align: top;
+
+    font-size: 14px;
+}
+
+.notes-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.notes-table tbody tr:hover {
+    background: #1b1b1c;
+}
+
+.notes-table .description {
+    max-width: 400px;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.notes-table .empty {
+    text-align: center;
+    opacity: 0.5;
+    padding: 40px;
+}
+
+.table-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.inline-form {
+    display: contents;
+}
+
+.table-input,
+.table-textarea {
+    width: 100%;
+
+    background: #101010;
+
+    border: 1px solid #2a2a2a;
+
+    color: #e5e5e5;
+
+    border-radius: 8px;
+
+    padding: 10px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: all 0.2s ease;
+}
+
+.table-input:focus,
+.table-textarea:focus {
+    border-color: #22c55e;
+
+    box-shadow:
+    0 0 0 3px rgba(34, 197, 94, 0.15);
+}
+
+.table-textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.button.small {
+    padding: 10px 14px;
+    font-size: 13px;
+}
+
+.button.danger:hover {
+    background: #ef4444;
+    border-color: #ef4444;
+    color: white;
+}
+
+.table-input[readonly],
+.table-textarea[readonly] {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    cursor: default;
+}
+
+.table-input:not([readonly]),
+.table-textarea:not([readonly]) {
+    background: #101010;
+}
