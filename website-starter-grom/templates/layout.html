@@ -1,0 +1,33 @@
+{{ define "layout" }}
+
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+      <title>{{ .Title }}</title>
+
+      <link rel="stylesheet" href="/static/css/style.css">
+
+      <script defer src="/static/js/script.js"></script>
+  </head>
+
+  <body>
+
+      {{ template "navbar" . }}
+
+      <div class="button-wrapper">
+        <button class="button" onClick="sayHello()">Click Me</button>
+      </div>
+
+      <main class="container">
+          {{ template "content" . }}
+      </main>
+
+      {{ template "footer" . }}
+
+  </body>
+
+</html>
+
+{{ end }}
